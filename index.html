@@ -6,23 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
     <title>Kiiru's World Clock</title>
   </head>
   <body>
-    <div id="tokyo"></div>
-    <br />
-    <div id="today"></div>
-    <br />
-    <div id="tomorrow"></div>
-    <br />
-    <div id="tenYearsFromNow"></div>
-    <br />
-    <div id="local"></div>
-    <br />
-    <div id="honolulu"></div>
-    <br />
-    <div id="parisTen"></div>
-    <br />
+    <div class="container">
+      <h1>World Clock</h1>
+      <div id="tokyo"></div>
+      <br />
+      <div id="today"></div>
+      <br />
+      <div id="tomorrow"></div>
+      <br />
+      <div id="tenYearsFromNow"></div>
+      <br />
+      <div id="local"></div>
+      <br />
+      <div id="honolulu"></div>
+      <br />
+      <div id="parisTen"></div>
+      <br />
+    </div>
+    <footer class="codedBy">
+      ミ☆ Coded by
+      <a
+        href="https://www.linkedin.com/in/kiirustuart/"
+        class="linkedIn"
+        target="_blank"
+        >Kiiru</a
+      >
+      🤍 Open-sourced on
+      <a
+        href="https://github.com/kiiru-sn/My-Weather-App"
+        class="gitHub"
+        target="_blank"
+        >GitHub</a
+      >
+      and hosted on
+      <a
+        href="https://kiirusweatherapp.netlify.app/"
+        class="netlify"
+        target="_blank"
+        >Netlify</a
+      >
+      ミ☆
+    </footer>
     <script>
       let tokyoTime = moment()
         .tz("Asia/Tokyo")
