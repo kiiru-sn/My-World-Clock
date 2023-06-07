@@ -15,3 +15,12 @@ let tenYearsFromNow = moment()
   .format("dddd, MMMM Do, YYYY H:mm:s");
 let tenYearsElement = document.querySelector("#tenYearsFromNow");
 tenYearsElement.innerHTML = `10 years from now, it will be ${tenYearsFromNow}`;
+
+//<br />
+//     <div id="tokyo"></div>
+//     <br />
+//     <div id="today"></div>
+//     <br />
+//     <div id="tomorrow"></div>
+//     <br />
+//     <div id="tenYearsFromNow"></div>
