@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <select name="" id="countries">
+        <option value="">Select a country</option>
+        <option value="paris" id="paris">Paris</option>
+        <option value="tokyo" id="tokyo">Tokyo</option>
+        <option value="sydney" id="sydney">Sydney</option>
+      </select>
+    </form>
+
+    <script>
+      let parisNow = moment()
+        .tz("Europe/Paris")
+        .format("dddd, MMMM D, YYYY h:m a");
+      let parisElement = document.querySelector("#paris");
+
+      let tokyoNow = moment()
+        .tz("Asia/Tokyo")
+        .format("dddd, MMMM D, YYYY h:m a");
+      let tokyoElement = document.querySelector("#tokyo");
+
+      let sydneyNow = moment()
+        .tz("Australia/Sydney")
+        .format("dddd, MMMM D, YYYY h:m a");
+      let sydneyElement = document.querySelector("#sydney");
+
+      function showSelectedCountry(event) {
+        if (event.target.value.length > 0) {
+          if (event.target.value === "paris") {
+            alert(`It is ${parisNow} in Europe/Paris`);
+          }
+          if (event.target.value === "tokyo") {
+            alert(`It is ${tokyoNow} in Asia/Tokyo`);
+          }
+          if (event.target.value === "sydney") {
+            alert(`It is ${sydneyNow} in Australia/Sydney`);
+          }
+        }
+      }
+
+      let selectedCountry = document.querySelector("#countries");
+      selectedCountry.addEventListener("change", showSelectedCountry);
+    </script>
+  </body>
+</html>
