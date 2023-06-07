@@ -10,6 +10,10 @@ body {
 form {
   padding-bottom: 10px;
 }
+
+h1 {
+  text-align: center;
+}
 .container {
   margin-left: auto;
   margin-right: auto;
