@@ -2,9 +2,9 @@ body {
   padding-top: 150px;
   font-family: "Ubuntu", sans-serif;
   color: #505050;
-  background: rgba(194, 175, 201, 0.5);
-  background-image: url("https://img.freepik.com/free-vector/flat-design-roof-tile-pattern_23-2149257258.jpg?w=740&t=st=1685709326~exp=1685709926~hmac=9d0f3de16914602f22378a51fe02e0b0379fc7c6deb4f424e111952c2fc0149b");
-  background-position: cover;
+  background: rgb(75, 75, 75);
+  background-image: url("https://w0.peakpx.com/wallpaper/258/643/HD-wallpaper-hexagon-light-texture-material-property.jpg");
+  background-position: repeat;
 }
 
 form {
@@ -20,8 +20,8 @@ h1 {
   border-radius: 40px;
   width: 475px;
   padding: 20px 20px;
-  background: rgba(193, 185, 200, 0.8);
-  box-shadow: 0px 0px 20px 20px #b0b0b0;
+  background: rgba(209, 194, 227, 0.95);
+  box-shadow: 0px 0px 25px 25px #b0b0b0;
 }
 
 select {

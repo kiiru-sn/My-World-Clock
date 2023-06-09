@@ -1,20 +1,57 @@
-let tokyoTime = moment().tz("Asia/Tokyo").format("dddd, MMMM, D, YYYY H:m:s");
-let tokyoElement = document.querySelector("#tokyo");
-tokyoElement.innerHTML = tokyoTime;
+function updateTime() {
+  //San Diego
+  let sanDiegoElement = document.querySelector("#san-diego");
+  let sanDiegoDateElement = sanDiegoElement.querySelector(".date");
+  let sanDiegoTimeElement = sanDiegoElement.querySelector(".time");
+  let sanDiegoTime = moment().tz("America/Los_Angeles");
 
-let today = moment().format("dddd, MMMM Do, YYYY");
-let todayElement = document.querySelector("#today");
-todayElement.innerHTML = `Today is ${today}`;
+  sanDiegoDateElement.innerHTML = sanDiegoTime.format("MMMM Do, YYYY");
+  sanDiegoTimeElement.innerHTML = sanDiegoTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
 
-let tomorrow = moment().add(1, "day").format("dddd, MMMM Do, YYYY");
-let tomorrowElement = document.querySelector("#tomorrow");
-tomorrowElement.innerHTML = `Tomorrow will be ${tomorrow}`;
+  //Stockholm
+  let stockholmElement = document.querySelector("#stockholm");
+  let stockholmDateElement = stockholmElement.querySelector(".date");
+  let stockholmTimeElement = stockholmElement.querySelector(".time");
+  let stockholmTime = moment().tz("Europe/Stockholm");
 
-let tenYearsFromNow = moment()
-  .add(10, "year")
-  .format("dddd, MMMM Do, YYYY H:mm:s");
-let tenYearsElement = document.querySelector("#tenYearsFromNow");
-tenYearsElement.innerHTML = `10 years from now, it will be ${tenYearsFromNow}`;
+  stockholmDateElement.innerHTML = stockholmTime.format("MMMM Do, YYYY");
+  stockholmTimeElement.innerHTML = stockholmTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+
+  //Dublin
+  let dublinElement = document.querySelector("#dublin");
+  let dublinDateElement = dublinElement.querySelector(".date");
+  let dublinTimeElement = dublinElement.querySelector(".time");
+  let dublinTime = moment().tz("Europe/Dublin");
+
+  dublinDateElement.innerHTML = dublinTime.format("MMMM Do, YYYY");
+  dublinTimeElement.innerHTML = dublinTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+}
+updateTime();
+setInterval(updateTime, 1000);
+
+//let tokyoTime = moment().tz("Asia/Tokyo").format("dddd, MMMM, D, YYYY H:m:s");
+//let tokyoElement = document.querySelector("#tokyo");
+//tokyoElement.innerHTML = tokyoTime;
+
+//let today = moment().format("dddd, MMMM Do, YYYY");
+//let todayElement = document.querySelector("#today");
+//todayElement.innerHTML = `Today is ${today}`;
+
+//let tomorrow = moment().add(1, "day").format("dddd, MMMM Do, YYYY");
+//let tomorrowElement = document.querySelector("#tomorrow");
+//tomorrowElement.innerHTML = `Tomorrow will be ${tomorrow}`;
+
+//let tenYearsFromNow = moment()
+// .add(10, "year")
+// .format("dddd, MMMM Do, YYYY H:mm:s");
+//let tenYearsElement = document.querySelector("#tenYearsFromNow");
+//tenYearsElement.innerHTML = `10 years from now, it will be ${tenYearsFromNow}`;
 
 //<br />
 //     <div id="tokyo"></div>
